@@ -7,6 +7,42 @@ const resultEl2 = document.querySelector('.alert-2');
 
 
 
+btn.addEventListener('click', function(){
+
+    const inputEl = document.getElementById('data').value;
+    const splitWord = [];
+    const reverseWord = [];
+
+    console.log(inputEl)
+    for(x = inputEl.length - 1; x >= 0; x--){
+        console.log(inputEl[x]);
+        splitWord.push(inputEl[x]);
+        console.log(splitWord);
+    }
+    
+
+
+
+
+
+
+
+
+    // for(let x = 0; x < inputEl.length; x++){
+    //     inputEl[x];
+    //     splitWord.push(inputEl[x])
+    //     console.log(splitWord);
+    //     console.log(userWord)
+
+    // }
+
+    
+
+
+
+   
+  
+});
 
 
 
