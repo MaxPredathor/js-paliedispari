@@ -13,15 +13,30 @@ btn.addEventListener('click', function(){
     const splitWord = [];
     const reverseWord = [];
 
-    console.log(inputEl)
-    for(x = inputEl.length - 1; x >= 0; x--){
+
+
+    for(let x = 0; x < inputEl.length; x++){
         console.log(inputEl[x]);
         splitWord.push(inputEl[x]);
-        console.log(splitWord);
+
     }
+    console.log(splitWord);
     
 
+    for(let x = inputEl.length - 1; x >= 0; x--){
+        console.log(inputEl[x]);
+        reverseWord.push(inputEl[x]);
+    }
+    console.log(reverseWord);
+    
+    let stringSplit = splitWord.join("");
+    let stringaReverse = reverseWord.join("");
 
+    if(stringSplit === stringaReverse){
+        console.log('La tua parola è un Palindromo');
+    } else{
+        console.log('La tua parola NON è un Palindromo');
+    }
 
 
 
