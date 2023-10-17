@@ -10,22 +10,25 @@ const resultEl2 = document.querySelector('.alert-2');
 btn.addEventListener('click', function(){
 
     const inputEl = document.getElementById('data').value;
+    palindromo(inputEl);  
+  
+});
+
+function palindromo(input){
     const splitWord = [];
     const reverseWord = [];
 
-
-
-    for(let x = 0; x < inputEl.length; x++){
-        console.log(inputEl[x]);
-        splitWord.push(inputEl[x]);
+    for(let x = 0; x < input.length; x++){
+        console.log(input[x]);
+        splitWord.push(input[x]);
 
     }
     console.log(splitWord);
     
 
-    for(let x = inputEl.length - 1; x >= 0; x--){
-        console.log(inputEl[x]);
-        reverseWord.push(inputEl[x]);
+    for(let x = input.length - 1; x >= 0; x--){
+        console.log(input[x]);
+        reverseWord.push(input[x]);
     }
     console.log(reverseWord);
     
@@ -37,28 +40,7 @@ btn.addEventListener('click', function(){
     } else{
         console.log('La tua parola NON è un Palindromo');
     }
-
-
-
-
-
-
-    // for(let x = 0; x < inputEl.length; x++){
-    //     inputEl[x];
-    //     splitWord.push(inputEl[x])
-    //     console.log(splitWord);
-    //     console.log(userWord)
-
-    // }
-
-    
-
-
-
-   
-  
-});
-
+}
 
 
 
