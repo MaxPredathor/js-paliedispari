@@ -2,7 +2,6 @@
     const pariBtn = document.getElementById('pari');
     const dispariBtn = document.getElementById('dispari');
     const checkBtn = document.getElementById('button-2');
-    const resultEl2 = document.querySelector('.alert-2');
 
 btn.addEventListener('click', function(){
 
@@ -126,7 +125,7 @@ function game(input){
     if(inputEl2 > 5){
         console.log('Errore')
     }else{
-        if(risultato % 2 === 0){
+        if(isEven(risultato)){
             if(input === 'pari'){
                 console.log('hai vinto');
                 resetter('alert-danger');
@@ -136,7 +135,6 @@ function game(input){
                 resetter('alert-success');
                 printer('alert-danger', 'Hai Perso');
             }
-            
         } else{
             if(input === 'dispari'){
                 console.log('hai vinto');
