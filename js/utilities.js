@@ -32,3 +32,17 @@ function palindromo(input){
         console.log('La tua parola NON è un Palindromo');
     }
 }
+function printer(alertColor, msg){
+
+  const resultEl = document.querySelector('.alert');
+  resultEl.classList.add(alertColor);
+  resultEl.classList.remove('d-none')
+  resultEl.innerText = msg;
+}
+
+function resetter(alertColor){
+
+  const resultEl = document.querySelector('.alert');
+  resultEl.classList.remove(alertColor);
+  resultEl.classList.add('d-none');
+}
