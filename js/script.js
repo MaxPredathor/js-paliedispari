@@ -14,33 +14,43 @@
     function palindromo(input){
         const splitWord = [];
         const reverseWord = [];
-    
-        for(let x = 0; x < input.length; x++){
-            console.log(input[x]);
-            splitWord.push(input[x]);
-    
-        }
-        console.log(splitWord);
         
-    
-        for(let x = input.length - 1; x >= 0; x--){
-            console.log(input[x]);
-            reverseWord.push(input[x]);
-        }
-        console.log(reverseWord);
-        
-        let stringSplit = splitWord.join("");
-        let stringaReverse = reverseWord.join("");
-    
-        if(stringSplit === stringaReverse){
-            resetter('alert-danger');
-            printer('alert-success', 'La tua parola è un Palindromo')
-            console.log('La tua parola è un Palindromo');
-        } else{
+        if(input === ''){
             resetter('alert-success');
-            printer('alert-danger', 'La tua parola NON è un Palindromo')
-            console.log('La tua parola NON è un Palindromo');
+            printer('alert-danger', 'Inserire una Parola');
+        }else if(!isNaN(input)){
+            resetter('alert-success');
+            printer('alert-danger', 'Inserire una Parola, non un numero');
+        }else{
+            for(let x = 0; x < input.length; x++){
+                console.log(input[x]);
+                splitWord.push(input[x]);
+            }
+            console.log(splitWord);
+            
+        
+            for(let x = input.length - 1; x >= 0; x--){
+                console.log(input[x]);
+                reverseWord.push(input[x]);
+            }
+            console.log(reverseWord);
+            
+            let stringSplit = splitWord.join("");
+            let stringaReverse = reverseWord.join("");
+            
+            
+            if(stringSplit === stringaReverse){
+                resetter('alert-danger');
+                printer('alert-success', 'La tua parola è un Palindromo');
+                console.log('La tua parola è un Palindromo');
+            } else{
+                resetter('alert-success');
+                printer('alert-danger', 'La tua parola NON è un Palindromo');
+                console.log('La tua parola NON è un Palindromo');
+            }
+            
         }
+    
     }
     
     pariBtn.addEventListener('click', function(){
