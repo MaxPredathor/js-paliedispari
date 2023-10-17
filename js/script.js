@@ -32,9 +32,11 @@
         let stringaReverse = reverseWord.join("");
     
         if(stringSplit === stringaReverse){
+            resetter('alert-danger');
             printer('alert-success', 'La tua parola è un Palindromo')
             console.log('La tua parola è un Palindromo');
         } else{
+            resetter('alert-success');
             printer('alert-danger', 'La tua parola NON è un Palindromo')
             console.log('La tua parola NON è un Palindromo');
         }
@@ -46,6 +48,13 @@
         resultEl.classList.add(alertColor);
         resultEl.classList.remove('d-none')
         resultEl.innerText = msg;
+    }
+
+    function resetter(alertColor){
+
+        const resultEl = document.querySelector('.alert');
+        resultEl.classList.remove(alertColor);
+        resultEl.classList.add('d-none');
     }
 
 
